@@ -1,0 +1,66 @@
+// Project structure showing multiple domains
+com.example
+├── ordering/                  // Ordering Domain
+│   ├── domain/
+│   │   ├── model/
+│   │   │   ├── Order.java
+│   │   │   ├── OrderLine.java
+│   │   │   └── OrderStatus.java
+│   │   └── repository/
+│   │       └── OrderRepository.java
+│   ├── application/
+│   │   ├── OrderService.java
+│   │   └── dto/
+│   │       └── OrderDTO.java
+│   └── infrastructure/
+│       ├── repository/
+│       │   └── JpaOrderRepository.java
+│       └── web/
+│           └── OrderController.java
+│
+├── inventory/                 // Inventory Domain
+│   ├── domain/
+│   │   ├── model/
+│   │   │   ├── Product.java
+│   │   │   ├── Stock.java
+│   │   │   └── StockReservation.java
+│   │   └── repository/
+│   │       └── StockRepository.java
+│   ├── application/
+│   │   ├── InventoryService.java
+│   │   └── dto/
+│   │       └── StockDTO.java
+│   └── infrastructure/
+│       ├── repository/
+│       │   └── JpaStockRepository.java
+│       └── web/
+│           └── InventoryController.java
+│
+├── shipping/                  // Shipping Domain
+│   ├── domain/
+│   │   ├── model/
+│   │   │   ├── Shipment.java
+│   │   │   ├── ShipmentStatus.java
+│   │   │   └── Address.java
+│   │   └── repository/
+│   │       └── ShipmentRepository.java
+│   ├── application/
+│   │   ├── ShippingService.java
+│   │   └── dto/
+│   │       └── ShipmentDTO.java
+│   └── infrastructure/
+│       ├── repository/
+│       │   └── JpaShipmentRepository.java
+│       └── web/
+│           └── ShippingController.java
+│
+└── shared/                    // Shared Kernel
+    ├── domain/
+    │   ├── DomainEvent.java
+    │   └── AggregateRoot.java
+    ├── infrastructure/
+    │   ├── EventBus.java
+    │   └── persistence/
+    │       └── JpaConfig.java
+    └── utils/
+        └── IdGenerator.java
