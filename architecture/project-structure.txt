@@ -1,0 +1,71 @@
+ecommerce-parent/                  # Root project directory
+├── pom.xml                     # Parent POM
+│
+├── shared-kernel/              # Shared components module
+│   ├── pom.xml
+│   └── src/
+│       ├── main/
+│       │   ├── java/
+│       │   │   └── com/example/shared/
+│       │   │       ├── domain/
+│       │   │       │   ├── DomainEvent.java
+│       │   │       │   └── AggregateRoot.java
+│       │   │       └── infrastructure/
+│       │   │           └── EventBus.java
+│       │   └── resources/
+│       └── test/
+│
+├── ordering-domain/            # Ordering domain module
+│   ├── pom.xml
+│   └── src/
+│       ├── main/
+│       │   ├── java/
+│       │   │   └── com/example/ordering/
+│       │   │       ├── domain/
+│       │   │       │   ├── model/
+│       │   │       │   │   ├── Order.java
+│       │   │       │   │   └── OrderLine.java
+│       │   │       │   └── repository/
+│       │   │       ├── application/
+│       │   │       │   ├── OrderService.java
+│       │   │       │   └── dto/
+│       │   │       └── infrastructure/
+│       │   └── resources/
+│       └── test/
+│
+├── inventory-domain/           # Inventory domain module
+│   ├── pom.xml
+│   └── src/
+│       ├── main/
+│       │   ├── java/
+│       │   │   └── com/example/inventory/
+│       │   │       ├── domain/
+│       │   │       ├── application/
+│       │   │       └── infrastructure/
+│       │   └── resources/
+│       └── test/
+│
+├── shipping-domain/            # Shipping domain module
+│   ├── pom.xml
+│   └── src/
+│       ├── main/
+│       │   ├── java/
+│       │   │   └── com/example/shipping/
+│       │   │       ├── domain/
+│       │   │       ├── application/
+│       │   │       └── infrastructure/
+│       │   └── resources/
+│       └── test/
+│
+└── ecommerce-application/      # Main application module
+    ├── pom.xml
+    └── src/
+        ├── main/
+        │   ├── java/
+        │   │   └── com/example/
+        │   │       ├── EcommerceApplication.java
+        │   │       └── config/
+        │   │           └── ApplicationConfig.java
+        │   └── resources/
+        │       └── application.yml
+        └── test/
